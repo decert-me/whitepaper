@@ -1,4 +1,4 @@
-# Unichain
+# Unichain whitepaper
 
 October 2024
 
@@ -65,10 +65,7 @@ TEE block building is a powerful primitive for rollups, not only mitigating the 
 
 ### 3.2 Flashblocks
 
-Flashblocks are block pre-confirmations issued by the TEE block builder. Shorter block times lower adverse selection costs for liquidity providers [13, 14], reduce latency for users, and foster a more
-efficient onchain market. As transactions are streamed to the TEE builder, it incrementally commits to Flashblocks, which are ordered sets of transactions that will be included in the eventual proposed
-block. The sequencer then broadcasts these Flashblocks as pending blocks, providing users, applications, and integrators with the experience of block times multiple times faster than the default. In most
-current rollup architectures, block proposals face high fixed latency due to serialization and state root generation, making sub-second block times infeasible. Flashblocks bypass this overhead over short
+Flashblocks are block pre-confirmations issued by the TEE block builder. Shorter block times lower adverse selection costs for liquidity providers [13, 14], reduce latency for users, and foster a more efficient onchain market. As transactions are streamed to the TEE builder, it incrementally commits to Flashblocks, which are ordered sets of transactions that will be included in the eventual proposed block. The sequencer then broadcasts these Flashblocks as pending blocks, providing users, applications, and integrators with the experience of block times multiple times faster than the default. In most current rollup architectures, block proposals face high fixed latency due to serialization and state root generation, making sub-second block times infeasible. Flashblocks bypass this overhead over short
 timescales, enabling low latency blockchain interaction.
 
 The TEE enforces priority ordering for each Flashblock and supports a Flashblock bundle type that enables users to target specific Flashblocks for inclusion. The combination of these two features facilitates allocation of MEV for the benefit of users by applications, such as through MEV tax [20].
