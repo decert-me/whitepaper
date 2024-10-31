@@ -22,7 +22,7 @@ We need a way for the payee to know that the previous owners did not sign any ea
 
 
 ## 3. Timestamp Sererr
-The solution we propose begins with a timestamp server. A timestamp server works by taking a hash of a block of items to be timestamped and widely publishing the hash such as in a newspaper or Usenet post [2-5]. The timestamp proves that the data must have existed at the time obviously in order to get into the hash. Each timestamp includes the previous timestamp in its hash forming a chain with each additional timestamp reinforcing the ones before it.
+The solution we propose begins with a timestamp server. A timestamp server works by taking a hash of a block of items to be timestamped and widely publishing the hash such as in a newspaper or Usenet post [2][3][4][5]. The timestamp proves that the data must have existed at the time obviously in order to get into the hash. Each timestamp includes the previous timestamp in its hash forming a chain with each additional timestamp reinforcing the ones before it.
 
 ![timestamp](./images/bitcoin-whitepaper-02.png)
 
@@ -60,7 +60,7 @@ The incentive can also be funded with transaction fees. If the output value of a
 The incentive may help encourage nodes to stay honest. If a greedy attacker is able to assemble more CPU power than all the honest nodes he would have to choose between using it to defraud people by stealing back his payments or using it to generate new coins. He ought to find it more profitable to play by the rules such rules that favour him with more new coins than everyone else combined than to undermine the system and the validity of his own wealth.
 
 ## 7. Reclaiming Disk Space
-Once the latest transaction in a coin is buried under enough blocks the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash transactions are hashed in a Merkle Tree [7][2][5] with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored.
+Once the latest transaction in a coin is buried under enough blocks the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash transactions are hashed in a Merkle Tree [2][5][7] with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored.
 
 ![block hash](./images/bitcoin-whitepaper-04.png)
 
